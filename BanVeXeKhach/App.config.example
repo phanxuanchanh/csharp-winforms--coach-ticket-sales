@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+	<configSections>
+	</configSections>
+	<appSettings>
+		<add key="SMTP_Host" value=""/>
+		<add key="SMTP_Port" value=""/>
+		<add key="SMTP_UserName" value=""/>
+		<add key="SMTP_Password" value=""/>
+		<add key="ProjectDetailURL" value="https://www.phanxuanchanh.com/2022/06/07/chia-se-code-do-an-xay-dung-ung-dung-quan-ly-ban-ve-xe-khach/"/>
+	</appSettings>
+
+	<startup>
+		<supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+	</startup>
+	<connectionStrings>
+		<add name="QuanLyBanVeXe" connectionString=""
+		 providerName="System.Data.SqlClient" />
+		<add name="BanVeXeKhach.Properties.Settings.QuanLyBanVeXeKhachConnectionString"
+		 connectionString=""
+		 providerName="System.Data.SqlClient" />
+	</connectionStrings>
+</configuration>

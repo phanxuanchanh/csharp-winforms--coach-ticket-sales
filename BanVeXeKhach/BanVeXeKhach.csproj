@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{31772F17-45F1-4A08-B8FE-F18EABD1E68B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>BanVeXeKhach</RootNamespace>
+    <AssemblyName>BanVeXeKhach</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="BCrypt.Net, Version=0.1.5073.29922, Culture=neutral, PublicKeyToken=6bcd409ee6bc9292, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt-Official.0.1.109\lib\BCrypt.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XanderUI">
+      <HintPath>..\..\Lib\XanderUI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountInfoForm.Designer.cs">
+      <DependentUpon>AccountInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorForm.Designer.cs">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstallationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstallationForm.Designer.cs">
+      <DependentUpon>InstallationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\InvoiceReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InvoiceReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\InvoiceReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\InvoiceReportForm.Designer.cs">
+      <DependentUpon>InvoiceReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ReportDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RouteReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RouteReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RouteReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\RouteReportForm.Designer.cs">
+      <DependentUpon>RouteReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\EmployeeReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeeReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\EmployeeReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\EmployeeReportForm.Designer.cs">
+      <DependentUpon>EmployeeReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session\CustomerSession.cs" />
+    <Compile Include="Session\LoginSession.cs" />
+    <Compile Include="Settings\AppSetting.cs" />
+    <Compile Include="Settings\EmailSetting.cs" />
+    <Compile Include="EmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeForm.Designer.cs">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartupForm.Designer.cs">
+      <DependentUpon>StartupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\CoachTripDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\CoachTripDetailForm.Designer.cs">
+      <DependentUpon>CoachTripDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\SearchOrCreateCustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\SearchOrCreateCustomerForm.Designer.cs">
+      <DependentUpon>SearchOrCreateCustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UcTicketCancellation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UcTicketCancellation.Designer.cs">
+      <DependentUpon>UcTicketCancellation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UcTicketExchange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UcTicketExchange.Designer.cs">
+      <DependentUpon>UcTicketExchange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UcVehicleManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UcVehicleManager.Designer.cs">
+      <DependentUpon>UcVehicleManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UcCoachTripManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UcCoachTripManager.Designer.cs">
+      <DependentUpon>UcCoachTripManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UcInvoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UcInvoice.Designer.cs">
+      <DependentUpon>UcInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UcLabel_Header1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UcLabel_Header1.Designer.cs">
+      <DependentUpon>UcLabel_Header1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UcLabel_Header2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UcLabel_Header2.Designer.cs">
+      <DependentUpon>UcLabel_Header2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UcReportManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UcReportManager.Designer.cs">
+      <DependentUpon>UcReportManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UcRouteManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UcRouteManager.Designer.cs">
+      <DependentUpon>UcRouteManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UcEmployeeManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UcEmployeeManager.Designer.cs">
+      <DependentUpon>UcEmployeeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UcTextbox_1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UcTextbox_1.Designer.cs">
+      <DependentUpon>UcTextbox_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UcTicketSales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UcTicketSales.Designer.cs">
+      <DependentUpon>UcTicketSales.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AccountInfoForm.resx">
+      <DependentUpon>AccountInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorForm.resx">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallationForm.resx">
+      <DependentUpon>InstallationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\InvoiceReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>InvoiceReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\InvoiceReportForm.resx">
+      <DependentUpon>InvoiceReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RouteReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RouteReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RouteReportForm.resx">
+      <DependentUpon>RouteReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\EmployeeReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EmployeeReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\EmployeeReportForm.resx">
+      <DependentUpon>EmployeeReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeForm.resx">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartupForm.resx">
+      <DependentUpon>StartupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\CoachTripDetailForm.resx">
+      <DependentUpon>CoachTripDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\SearchOrCreateCustomerForm.resx">
+      <DependentUpon>SearchOrCreateCustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UcTicketCancellation.resx">
+      <DependentUpon>UcTicketCancellation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UcTicketExchange.resx">
+      <DependentUpon>UcTicketExchange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UcVehicleManager.resx">
+      <DependentUpon>UcVehicleManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UcCoachTripManager.resx">
+      <DependentUpon>UcCoachTripManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UcInvoice.resx">
+      <DependentUpon>UcInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UcLabel_Header1.resx">
+      <DependentUpon>UcLabel_Header1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UcLabel_Header2.resx">
+      <DependentUpon>UcLabel_Header2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UcReportManager.resx">
+      <DependentUpon>UcReportManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UcRouteManager.resx">
+      <DependentUpon>UcRouteManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UcEmployeeManager.resx">
+      <DependentUpon>UcEmployeeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UcTextbox_1.resx">
+      <DependentUpon>UcTextbox_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UcTicketSales.resx">
+      <DependentUpon>UcTicketSales.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config.example" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Reports\ReportDataSet.xsc">
+      <DependentUpon>ReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\ReportDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\ReportDataSet.xss">
+      <DependentUpon>ReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\Cancel_icon-icons.com_73703.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1455554996_users-11_icon-icons.com_53275.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1455555007_users-16_icon-icons.com_53274.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businessapplication_edit_male_user_thepencil_theclient_negocio_2321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\003-bus-ticket-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\001-bus-ticket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bookmark-add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Lib\XanderUI.dll" />
+    <None Include="Resources\021-add.png" />
+    <None Include="Resources\bus_image_1.jpg" />
+    <None Include="Resources\4469996.png" />
+    <None Include="Resources\4439477.png" />
+    <None Include="Resources\email.txt" />
+    <None Include="Resources\030-budget.png" />
+    <None Include="Resources\bus %284%29.png" />
+    <None Include="Resources\003-report-2.png" />
+    <None Include="Resources\003-man.png" />
+    <None Include="Resources\bus %283%29.png" />
+    <None Include="Resources\icons8-maximize-button-961.png" />
+    <None Include="Resources\icons8-maximize-button-96.png" />
+    <None Include="Resources\icons8-maximize-100.png" />
+    <None Include="Resources\icons8-subtract-80.png" />
+    <None Include="Resources\5147493.png" />
+    <None Include="Resources\1102239.png" />
+    <None Include="Resources\3388918.png" />
+    <None Include="Resources\2799840.png" />
+    <None Include="Resources\5110581.png" />
+    <None Include="Resources\5632370.png" />
+    <None Include="Resources\2825990.png" />
+    <None Include="Resources\004-business-report.png" />
+    <None Include="Resources\021-financial-presentation.png" />
+    <None Include="Resources\006-businessman.png" />
+    <None Include="Resources\1649123.png" />
+    <None Include="Resources\1176390.png" />
+    <None Include="Resources\5363258.png" />
+    <None Include="Resources\013-computer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BanVeXeKhach.BUS_DAO\BanVeXeKhach.BUS_DAO.csproj">
+      <Project>{402c4794-2334-4631-a35c-92cfb74721a4}</Project>
+      <Name>BanVeXeKhach.BUS_DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BanVeXeKhach.Common\BanVeXeKhach.Common.csproj">
+      <Project>{4ba49b49-513a-40bc-b048-c0bb77ce08c8}</Project>
+      <Name>BanVeXeKhach.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

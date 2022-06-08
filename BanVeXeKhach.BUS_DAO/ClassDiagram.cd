@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BanVeXeKhach.BUS_DAO.DAO.CustomerDAO">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAkgEAAQAQAQAIAABAAAoAEAAAIAAAACAEAAAAQRAAI=</HashCode>
+      <FileName>DAO\CustomerDAO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BanVeXeKhach.BUS_DAO.DAO.EmployeeDAO">
+    <Position X="4" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BAkAAABAAAMAkECAABAQAAAAAAIAAAAKAEAAAAQQAAI=</HashCode>
+      <FileName>DAO\EmployeeDAO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BanVeXeKhach.BUS_DAO.BUS.Customer">
+    <Position X="8.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAgIAgAACAAAgAAAIIABAiAAAAIAABAAA=</HashCode>
+      <FileName>BUS\Customer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,14 @@
+﻿ĐÂY LÀ HÓA ĐƠN ĐIỆN TỬ VÉ XE KHÁCH MÀ BẠN ĐÃ THỰC HIỆN MUA
+
+@customerName
+@customerPhone
+@employeeName
+@routeName
+@coachTripName
+@departureDate
+
+#######################################################
+
+@tickets
+
+=> @totalMoney
