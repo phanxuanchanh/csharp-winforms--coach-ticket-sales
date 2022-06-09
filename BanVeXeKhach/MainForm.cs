@@ -42,7 +42,7 @@ namespace BanVeXeKhach
 
         private bool IsAdmin()
         {
-            return (LoginSession.Role == "Employer");
+            return (LoginSession.Role == "Admin");
         }
 
         private bool IsAvatarExists(string avatar)
@@ -108,11 +108,16 @@ namespace BanVeXeKhach
                 xuiCard_EmployeeNumber.Text2 = (await Employee.CountEmployeeAsync()).ToString();
 
                 if (IsAdmin())
+                {
                     xuiSuperButton_AdminTool.Enabled = true;
+                    xuiSuperButton_EmployeeTool.Enabled = false;
+                }
                 else
+                {
                     xuiSuperButton_AdminTool.Enabled = false;
-
-                xuiSuperButton_EmployeeTool.Enabled = true;
+                    xuiSuperButton_EmployeeTool.Enabled = true;
+                }
+                    
                 xuiSuperButton_AccountInfo.Enabled = true;
                 timerUpdateForm.Enabled = false;
 

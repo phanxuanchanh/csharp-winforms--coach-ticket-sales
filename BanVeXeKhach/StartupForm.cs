@@ -59,16 +59,16 @@ namespace BanVeXeKhach
                 {
                     new Employee
                     {
-                        EmployeeId = "employer1",
-                        FullName = "Người chủ 1",
+                        EmployeeId = "admin1",
+                        FullName = "Nguoi quan ly 1",
                         Phone = "1234123499",
-                        Email = "employee1@damh_banvexekhach.com",
+                        Email = "admin1@damh_banvexekhach.com",
                         Birthday = new DateTime(2001, 01, 01),
                         Address = "Ho Chi Minh",
                         Avatar = "",
                         Description = "",
                         Password = "1234",
-                        Title = "Employer"
+                        Title = "Admin"
                     },
                     new Employee
                     {

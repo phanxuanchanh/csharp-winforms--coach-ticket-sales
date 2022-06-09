@@ -213,7 +213,7 @@ namespace BanVeXeKhach
             DateTime employeeBirthday, string employeeAddress
         )
         {
-            if (!Regex.IsMatch(employeeName, @"^[\p{L} ]+$"))
+            if (!Regex.IsMatch(employeeName, @"^[\p{L}0-9 ]+$"))
                 return false;
 
             if (!Regex.IsMatch(employeePhone, @"^[0-9]{6,10}$"))

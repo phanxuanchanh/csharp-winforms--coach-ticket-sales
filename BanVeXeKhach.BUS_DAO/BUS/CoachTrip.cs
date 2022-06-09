@@ -95,12 +95,24 @@ namespace BanVeXeKhach.BUS_DAO.BUS
 
         public static bool CreateCoachTrip(CoachTrip coachTrip)
         {
-            return CoachTripDAO.CreateCoachTrip(coachTrip);
+            bool result = CoachTripDAO.CreateCoachTrip(coachTrip);
+            if (result)
+            {
+                CoachTrip newCoachTrip = CoachTripDAO.GetCoachTripByName(coachTrip.Name);
+                coachTrip.ID = newCoachTrip.ID;
+            }
+            return result;
         }
 
         public static async Task<bool> CreateCoachTripAsync(CoachTrip coachTrip)
         {
-            return await CoachTripDAO.CreateCoachTripAsync(coachTrip);
+            bool result = await CoachTripDAO.CreateCoachTripAsync(coachTrip);
+            if (result)
+            {
+                CoachTrip newCoachTrip = CoachTripDAO.GetCoachTripByName(coachTrip.Name);
+                coachTrip.ID = newCoachTrip.ID;
+            }
+            return result;
         }
 
         public bool UpdateCoachTrip()

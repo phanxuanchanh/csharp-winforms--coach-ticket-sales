@@ -105,7 +105,7 @@ namespace BanVeXeKhach.UserControls
                     lbInvoiceNumber.Text = string.Format("Số hóa đơn có trên hệ thống của khách hàng này là: {0}",
                         (await Invoice.CountInvoiceByCustomerIdAsync(customer.CustomerId)).ToString());
 
-                    if (LoginSession.Role == "Employer" || LoginSession.Role == "Conductor")
+                    if (LoginSession.Role == "Admin" || LoginSession.Role == "Conductor")
                     {
                         invoice.Customer = customer;
                         invoice.Employee = new Employee { EmployeeId = LoginSession.EmployeeId };
